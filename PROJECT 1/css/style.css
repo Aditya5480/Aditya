@@ -1,0 +1,147 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header Section */
+header {
+    background-color: #e23744;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+
+
+.logo img {
+    height: 20px;
+}
+
+
+
+
+
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffc2c2;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    background: url('../img/hero-bg.jpg') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 400px;
+    position: relative;
+}
+
+/* Optional: semi-transparent overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero img {
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+}
+
+.hero input {
+    padding: 12px 16px;
+    font-size: 1rem;
+    width: 80%;
+    max-width: 500px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Food Delivery Section */
+.food-delivery {
+    padding: 40px 10%;
+    background-color: #f9f9f9;
+}
+
+.food-delivery h2 {
+    font-size: 2rem;
+    color: #e23744;
+    margin-bottom: 20px;
+}
+
+.food-delivery p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero input {
+        width: 100%;
+    }
+
+    .food-delivery {
+        padding: 20px 5%;
+    }
+}
